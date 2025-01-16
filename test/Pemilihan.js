@@ -64,7 +64,7 @@ describe("Pemilihan", function () {
     });
 
     it("Should not allow voting for an invalid kandidat ID", async function () {
-      await expect(pemilihan.connect(addr1).Vote(3)).to.be.revertedWith(
+      await expect(pemilihan.connect(addr1).Vote(2)).to.be.revertedWith(
         "id tidak ditemukan"
       );
     });
